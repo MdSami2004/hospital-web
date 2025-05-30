@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+    </header>
+    <nav>
+        <button onclick="showForm('doctor')">Add Doctor</button>
+        <button onclick="showForm('patient')">Add Patient</button>
+        <button onclick="showForm('staff')">Add Staff</button>
+    </nav>
+    <main>
+        <form id="doctor" style="display:none">
+            <h2>Doctor Information</h2>
+            <input type="text" placeholder="Doctor ID" required />
+            <input type="text" placeholder="Name" required />
+            <input type="text" placeholder="Specialization" required />
+            <input type="text" placeholder="Contact" required />
+            <input type="number" placeholder="Fees (INR)" required />
+            <button type="button" class="submit-btn" onclick="saveForm('doctor')">Save & Download</button>
+        </form>
+        <form id="patient" style="display:none">
+            <h2>Patient Information</h2>
+            <input type="text" placeholder="Patient ID" required />
+            <input type="text" placeholder="Name" required />
+            <input type="text" placeholder="Contact" required />
+            <input type="text" placeholder="Disease" required />
+            <input type="number" placeholder="Age" required />
+            <input type="text" placeholder="Gender" required />
+            <input type="text" placeholder="Doctor ID" required />
+            <input type="text" placeholder="Room Number" required />
+            <button type="button" class="submit-btn" onclick="saveForm('patient')">Save & Download</button>
+        </form>
+        <form id="staff" style="display:none">
+            <h2>Staff Information</h2>
+            <input type="text" placeholder="Staff ID" required />
+            <input type="text" placeholder="Name" required />
+            <input type="text" placeholder="Contact" required />
+            <input type="text" placeholder="Role" required />
+            <input type="number" placeholder="Salary (INR)" required />
+            <button type="button" class="submit-btn" onclick="saveForm('staff')">Save & Download</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
